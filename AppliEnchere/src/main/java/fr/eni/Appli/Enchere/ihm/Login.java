@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import fr.eni.Aplli.Enchere.bll.bo.Utilisateur;
-;
+import fr.eniecole.annuaire.bll.UtilisateurManager;
 
 /**
  * Servlet implementation class Login
