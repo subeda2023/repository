@@ -1,7 +1,18 @@
 package fr.eni.Appli.Enchere.dal;
 
 public class DAOFactory {
+	
+	
+	
+	public static UtilisateurDAO getInstance() {
+		UtilisateurDAO instance = null;
+			if (instance == null) {
+				instance = new UtilisateurDAO();
+			}
+			return instance;
 
+		}
+	
 	public static UtilisateurDAO getUtilisateurDAO() {
 		UtilisateurDAO utilisateurDAO=null;
 		try {

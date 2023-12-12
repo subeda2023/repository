@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import fr.eni.Aplli.Enchere.bll.bo.Utilisateur;
 import fr.eni.Appli.Enchere.bll.UtilisateurManager;
+import fr.eni.Appli.Enchere.bll.bo.Utilisateur;
 
 /**
  * Servlet implementation class ajouterUtilisateur
