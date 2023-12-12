@@ -1,6 +1,8 @@
 package fr.eni.Appli.Enchere.ihm;
 
 import java.io.IOException;
+import java.sql.SQLException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
@@ -10,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import fr.eni.Aplli.Enchere.bll.bo.Utilisateur;
-import fr.eniecole.annuaire.bll.UtilisateurManager;
+import fr.eni.Appli.Enchere.bll.UtilisateurManager;
 
 /**
  * Servlet implementation class Login
@@ -35,7 +37,7 @@ public class Login extends HttpServlet {
 		//Récupère les paramètres du formulaire du login
 		String email;
 		String motDePasse;
-		Utilisateur utilisateur;
+		Utilisateur utilisateur = null;
 		HttpSession sess;
 		
 		email=request.getParameter("email");
@@ -43,7 +45,15 @@ public class Login extends HttpServlet {
 		
 		//Appelle la méthode login
 		
-		utilisateur=UtilisateurManager.getInstance().login(email, motDePasse);
+		try {
+			utilisateur=UtilisateurManager.getInstance().login(email, motDePasse);
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		if(utilisateur!=null)
 		{
 			//Si l'utilisateur trouvé, crée la session ou récupère la session
