@@ -9,25 +9,17 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-
-import fr.eni.Aplli.Enchere.bll.bo.Utilisateur;
+import fr.eni.Appli.Enchere.bll.bo.Utilisateur;
 
 public class UtilisateurDAO {
 
-	private static UtilisateurDAO instance;
+	
 	public static Utilisateur utilisateur ;
 	public UtilisateurDAO() {
 
 	}
 
-	public static UtilisateurDAO getInstance() {
-
-		if (instance == null) {
-			instance = new UtilisateurDAO();
-		}
-		return instance;
-
-	}
+	
 
 	public void insert(Utilisateur utilisateur) throws ClassNotFoundException, SQLException {
 		Connection cnx = ConnectionBDD();
