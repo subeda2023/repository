@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="ArticleVendu.jsp">
+</head>
+<body>
+<form action="index.php" method="post">
+    <h2>Créer une nouvelle catégorie</h2>
+
+    <div class="form-group">
+        <label for="noCategorie">Numéro de la catégorie</label>
+        <input type="number" name="noCategorie" id="noCategorie" placeholder="Saisissez le numéro de la catégorie">
+    </div>
+
+    <div class="form-group">
+        <label for="libelle">Libellé de la catégorie</label>
+        <input type="text" name="libelle" id="libelle" placeholder="Saisissez le libellé de la catégorie">
+    </div>
+
+    <input type="submit" value="Enregistrer">
+</form>
+
+</body>
+</html>

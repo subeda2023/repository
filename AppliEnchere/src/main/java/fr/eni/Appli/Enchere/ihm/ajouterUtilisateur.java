@@ -3,6 +3,7 @@ package fr.eni.Appli.Enchere.ihm;
 import java.io.IOException;
 import java.sql.SQLException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -19,7 +20,13 @@ import fr.eni.Appli.Enchere.bll.bo.Utilisateur;
 public class ajouterUtilisateur extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-  
+
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		RequestDispatcher rd = request.getRequestDispatcher("/jsp_css/utilisateur.jsp");
+		rd.forward(request, response);
+	}
+	
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -37,14 +44,12 @@ public class ajouterUtilisateur extends HttpServlet {
 		try {
 			UtilisateurManager.getInstance().insert(utilisateur);
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
-		response.sendRedirect("ajoutOK.html");
+		getServletContext().getRequestDispatcher("/jsp_css/ajoutOK.html").forward(request, response);
 	}
        
 }
