@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="UTF-8"%>
-<%@import="fr.eni.Appli.Enchere.bll.bo.Utilisateur" %>
+    pageEncoding="UTF-8"
+    import="fr.eni.Appli.Enchere.bll.bo.Utilisateur" %>
+    
 <!DOCTYPE html>
 <html>
 <head>

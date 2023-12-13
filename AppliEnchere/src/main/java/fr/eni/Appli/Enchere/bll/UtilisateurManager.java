@@ -3,7 +3,8 @@ package fr.eni.Appli.Enchere.bll;
 import java.sql.SQLException;
 import java.util.List;
 
-import fr.eni.Aplli.Enchere.bll.bo.Utilisateur;
+import fr.eni.Appli.Enchere.bll.bo.Utilisateur;
+import fr.eni.Appli.Enchere.dal.DAOFactory;
 import fr.eni.Appli.Enchere.dal.UtilisateurDAO;
 
 public class UtilisateurManager {
@@ -19,7 +20,7 @@ public class UtilisateurManager {
 	public static UtilisateurManager getInstance() {
 
 		if (instance == null) {
-			instance = new UtilisateurManager(UtilisateurDAO.getInstance());
+			instance = new UtilisateurManager(DAOFactory.getInstance());
 		}
 		return instance;
 
