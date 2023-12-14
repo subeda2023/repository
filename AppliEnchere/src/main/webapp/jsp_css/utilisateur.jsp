@@ -54,7 +54,7 @@
 
     <div class="form-group">
         <label for="codePostal">Code postal</label>
-        <input type="text" name="codePostal" id="codePostal" placeholder="Votre code postal" value="${utilisateur.codePostral}">
+        <input type="text" name="codePostal" id="codePostal" placeholder="Votre code postal" value="${utilisateur.codePostal}">
     </div>
 
     <div class="form-group">
@@ -64,7 +64,7 @@
 
     <div class="form-group">
         <label for="motDePasse">Mot de passe</label>
-        <input type="password" name="motDePasse" id="motDePasse" placeholder="Votre mot de passe" value="${utilisateur.motDePasse}">
+        <input type="password" name="moDePasse" id="motDePasse" placeholder="Votre mot de passe" value="${utilisateur.motDePasse}">
     </div>
 
     <input type="submit" value="Envoyer">

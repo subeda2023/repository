@@ -7,8 +7,8 @@ public class ArticleVendu {
 	private int noArticle ;
 	private String nomArticle ;
 	private String description ;
-	private LocalDate dateDebutEnchere ;
-	private LocalDate dateFinEnchere ;
+	private LocalDate dateDebutEncheres ;
+	private LocalDate dateFinEncheres ;
 	private float miseAPrix ;
 	private float prixDeVente ;
 	private Boolean etatVente ;
@@ -20,13 +20,13 @@ public class ArticleVendu {
 	}
 	
 
-	public ArticleVendu(int noArticle, String nomArticle, String description, LocalDate dateDebutEnchere,
-			LocalDate dateFinEnchere, float miseAPrix, float prixDeVente, Boolean etatVente) {
+	public ArticleVendu(int noArticle, String nomArticle, String description, LocalDate dateDebutEncheres,
+			LocalDate dateFinEncheres, float miseAPrix, float prixDeVente, Boolean etatVente) {
 		this.noArticle = noArticle;
 		this.nomArticle = nomArticle;
 		this.description = description;
-		this.dateDebutEnchere = dateDebutEnchere;
-		this.dateFinEnchere = dateFinEnchere;
+		this.dateDebutEncheres = dateDebutEncheres;
+		this.dateFinEncheres = dateFinEncheres;
 		this.miseAPrix = miseAPrix;
 		this.prixDeVente = prixDeVente;
 		this.etatVente = etatVente;
@@ -66,23 +66,23 @@ public class ArticleVendu {
 	}
 
 
-	public LocalDate getDateDebutEnchere() {
-		return dateDebutEnchere;
+	public LocalDate getDateDebutEncheres() {
+		return dateDebutEncheres;
 	}
 
 
-	public void setDateDebutEnchere(LocalDate dateDebutEnchere) {
-		this.dateDebutEnchere = dateDebutEnchere;
+	public void setDateDebutEnchere(LocalDate dateDebutEncheres) {
+		this.dateDebutEncheres = dateDebutEncheres;
 	}
 
 
-	public LocalDate getDateFinEnchere() {
-		return dateFinEnchere;
+	public LocalDate getDateFinEncheres() {
+		return dateFinEncheres;
 	}
 
 
-	public void setDateFinEnchere(LocalDate dateFinEnchere) {
-		this.dateFinEnchere = dateFinEnchere;
+	public void setDateFinEncheres(LocalDate dateFinEncheres) {
+		this.dateFinEncheres = dateFinEncheres;
 	}
 
 
@@ -127,10 +127,10 @@ public class ArticleVendu {
 	@Override
 	public String toString() {
 		return "ArticleVendu [noArticle=" + noArticle + ", nomArticle=" + nomArticle + ", description=" + description
-				+ ", dateDebutEnchere=" + dateDebutEnchere + ", dateFinEnchere=" + dateFinEnchere + ", miseAPrix="
+				+ ", dateDebutEncheres="  + dateDebutEncheres + ", dateFinEncheres=" + dateFinEncheres + ", miseAPrix="
 				+ miseAPrix + ", prixDeVente=" + prixDeVente + ", etatVente=" + etatVente + ", getNoArticle()="
 				+ getNoArticle() + ", getNomArticle()=" + getNomArticle() + ", getDescription()=" + getDescription()
-				+ ", getDateDebutEnchere()=" + getDateDebutEnchere() + ", getDateFinEnchere()=" + getDateFinEnchere()
+				+ ", getDateDebutEncheres()=" + getDateDebutEncheres() + ", getDateFinEncheres()=" + getDateFinEncheres()
 				+ ", getMiseAPrix()=" + getMiseAPrix() + ", getPrixDeVente()=" + getPrixDeVente() + ", getEtatVente()="
 				+ getEtatVente() + "]";
 	}

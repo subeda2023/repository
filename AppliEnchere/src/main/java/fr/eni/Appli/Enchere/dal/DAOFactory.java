@@ -3,6 +3,7 @@ package fr.eni.Appli.Enchere.dal;
 public class DAOFactory {
 	
 	
+	//TODO ajouter le simpleton d'ArticleDAO
 	
 	public static UtilisateurDAO getInstance() {
 		UtilisateurDAO instance = null;
@@ -11,7 +12,7 @@ public class DAOFactory {
 			}
 			return instance;
 
-		}
+	}
 	
 	public static UtilisateurDAO getUtilisateurDAO() {
 		UtilisateurDAO utilisateurDAO=null;

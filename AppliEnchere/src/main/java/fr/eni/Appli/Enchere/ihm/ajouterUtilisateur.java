@@ -38,18 +38,19 @@ public class ajouterUtilisateur extends HttpServlet {
 				request.getParameter("email"),
 				request.getParameter("telephone"),
 				request.getParameter("rue"),
-				request.getParameter("code_postal"),
+				request.getParameter("codePostal"),
 				request.getParameter("ville"),
-				request.getParameter("mot_de_passe"));
+				request.getParameter("motDePasse"));
 		try {
+			
 			UtilisateurManager.getInstance().insert(utilisateur);
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
-		getServletContext().getRequestDispatcher("/jsp_css/ajoutOK.html").forward(request, response);
+		//TODO : affichage de la réussite si l'utilisation est validée
+		//getServletContext().getRequestDispatcher("/jsp_css/ajoutOK.html").forward(request, response);
 	}
        
 }
