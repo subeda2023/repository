@@ -86,17 +86,17 @@ public class UtilisateurDAO {
 			ResultSet res=pstmt.executeQuery();
 		while (res.next()) {
 			Utilisateur utilisateur =new Utilisateur() ;
-			utilisateur.setPseudo(res.getString("Pseudo")) ;
-			utilisateur.setNom(res.getString("Nom")) ;
-			utilisateur.setPrenom(res.getString("Prenom")) ;
-			utilisateur.setEmail(res.getString("Email")) ;
-			utilisateur.setTelephone(res.getString("Telephone")) ;
-			utilisateur.setRue(res.getString("Rue")) ;
-			utilisateur.setCodePostal(res.getString("Code_Postal")) ;
-			utilisateur.setVille(res.getString("Ville")) ;
-			utilisateur.setMotDePasse(res.getString("MotDePasse")) ;
+			utilisateur.setPseudo(res.getString("pseudo")) ;
+			utilisateur.setNom(res.getString("nom")) ;
+			utilisateur.setPrenom(res.getString("prenom")) ;
+			utilisateur.setEmail(res.getString("email")) ;
+			utilisateur.setTelephone(res.getString("telephone")) ;
+			utilisateur.setRue(res.getString("rue")) ;
+			utilisateur.setCodePostal(res.getString("code_postal")) ;
+			utilisateur.setVille(res.getString("ville")) ;
+			utilisateur.setMotDePasse(res.getString("mot_de_passe")) ;
 			utilisateur.setCredit(res.getInt("Credit")) ;
-			utilisateur.setAdministrateur(res.getBoolean("Administrateur")) ;
+			utilisateur.setAdministrateur(res.getBoolean("administrateur")) ;
 		
 			utilisateurs.add(utilisateur) ;
 			

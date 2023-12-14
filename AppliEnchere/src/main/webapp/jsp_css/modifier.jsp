@@ -7,9 +7,10 @@
 <head>
 <meta charset="UTF-8">
 <title>Modification de l'utilisateur</title>
+<link rel="stylesheet" href="Utilisateur.css">
 </head>
 <body>
-	<h1>Modification d'un utilisateur</h1>
+	<h1>Modification des informations utilisateur</h1>
 	
 	<form method="post" action="modifierUtilisateur">
 		<input type="hidden" name="no_utilisateur" value="${utilisateur.noUtilisateur}">
